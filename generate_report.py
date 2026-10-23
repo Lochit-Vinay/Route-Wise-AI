@@ -31,11 +31,12 @@ class RouteWisePDFReport(FPDF):
 
     def header(self):
         # Header banner on every page
+        self.set_y(10)
         self.set_font("helvetica", "B", 8)
         self.set_text_color(100, 116, 139)  # Slate grey
-        self.cell(0, 6, "ROUTEWISE AI -- TECHNICAL ARCHITECTURE & EVALUATION REPORT", align="L")
-        self.cell(0, 6, "OCTOBER 2026 | CONFIDENTIAL", align="R")
-        self.ln(7)
+        self.cell(125, 5, "ROUTEWISE AI -- TECHNICAL ARCHITECTURE & EVALUATION REPORT", align="L")
+        self.cell(55, 5, "OCTOBER 2026 | CONFIDENTIAL", align="R")
+        self.ln(6)
         self.set_draw_color(226, 232, 240)
         self.set_line_width(0.3)
         self.line(15, self.get_y(), 195, self.get_y())
@@ -49,22 +50,22 @@ class RouteWisePDFReport(FPDF):
         self.ln(2)
         self.set_font("helvetica", "I", 8)
         self.set_text_color(148, 163, 184)
-        self.cell(0, 6, "RouteWise AI Logistics Optimization System | AIQON AI Internship Challenge", align="L")
-        self.cell(0, 6, f"Page {self.page_no()}", align="R")
+        self.cell(140, 6, "RouteWise AI Logistics Optimization System | AIQON AI Internship Challenge", align="L")
+        self.cell(40, 6, f"Page {self.page_no()}", align="R")
 
     def section_heading(self, number: str, title: str):
         self.ln(2)
         self.set_fill_color(241, 245, 249)  # Light slate
         self.set_text_color(15, 23, 42)  # Dark slate
         self.set_font("helvetica", "B", 11)
-        self.cell(0, 7, f"  {number}. {title.upper()}", fill=True, ln=True)
-        self.ln(2)
+        self.cell(0, 7, f"  {number}. {title.upper()}", fill=True)
+        self.ln(9)
 
     def sub_heading(self, title: str):
         self.set_font("helvetica", "B", 9.5)
         self.set_text_color(30, 58, 138)  # Deep blue
-        self.cell(0, 5.5, title, ln=True)
-        self.ln(1)
+        self.cell(0, 5.5, title)
+        self.ln(6.5)
 
     def body_paragraph(self, text: str):
         self.set_font("helvetica", "", 8.5)
@@ -97,21 +98,22 @@ def generate_technical_report(output_filename: str = "RouteWise_AI_Technical_Rep
     # ══════════════════════════════════════════════════════════════
     pdf.add_page()
 
-    # Title block
+    # Title block positioned cleanly below running header
+    title_box_y = 24
     pdf.set_fill_color(15, 23, 42)  # Dark navy
-    pdf.rect(15, 18, 180, 24, "F")
+    pdf.rect(15, title_box_y, 180, 24, "F")
 
-    pdf.set_xy(18, 20)
+    pdf.set_xy(18, title_box_y + 2.5)
     pdf.set_font("helvetica", "B", 15)
     pdf.set_text_color(255, 255, 255)
-    pdf.cell(0, 8, "RouteWise AI: Technical & Optimization Report", ln=True)
+    pdf.cell(174, 8, "RouteWise AI: Technical & Optimization Report")
 
-    pdf.set_xy(18, 28)
+    pdf.set_xy(18, title_box_y + 11.5)
     pdf.set_font("helvetica", "", 9)
     pdf.set_text_color(191, 219, 254)  # Light blue
-    pdf.cell(0, 6, "Multi-Objective Global Shipment Optimization Under Cost, Time & Risk Constraints", ln=True)
+    pdf.cell(174, 6, "Multi-Objective Global Shipment Optimization Under Cost, Time & Risk Constraints")
 
-    pdf.set_xy(15, 46)
+    pdf.set_xy(15, title_box_y + 28)
 
     # Section 1
     pdf.section_heading("1", "Executive Summary & Operational Context")
