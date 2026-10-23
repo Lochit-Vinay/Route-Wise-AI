@@ -216,16 +216,16 @@ Because $|\mathcal{R}_s| \le 10$ in practical freight forwarding, all individual
 
 ## 6. Software Quality & Verification
 
-The codebase is protected by **76 automated Pytest unit and integration tests**:
+The codebase is protected by **88 automated Pytest unit and integration tests**:
 
-- `tests/test_constraints.py` (15 tests): Verifies budget, transit, and delay checks, multi-violation accumulation, exact boundary equality, and closest-infeasible ranking.
-- `tests/test_optimizer.py` (23 tests): Verifies weight validation, strict sum-to-1 tolerance, min-max bounds, zero-variance handling, and ranking consistency.
-- `tests/test_recommender.py` (14 tests): Verifies end-to-end recommendation, score breakdown persistence, constraint overrides, and bulk invariant preservation.
+- `tests/test_constraints.py` (19 tests): Verifies budget, transit, and delay checks, multi-violation accumulation, exact boundary equality, and closest-infeasible ranking.
+- `tests/test_optimizer.py` (27 tests): Verifies weight validation, strict sum-to-1 tolerance, min-max bounds, zero-variance handling, and ranking consistency.
+- `tests/test_recommender.py` (15 tests): Verifies end-to-end recommendation, score breakdown persistence, constraint overrides, and bulk invariant preservation.
 - `tests/test_evaluation.py` (6 tests): Validates baseline heuristics, aggregate metrics, and empty dataset handling.
 - `tests/test_sensitivity.py` (5 tests): Tests simplex weight search, route switching, and constraint elasticity.
-- `tests/test_data_generator.py` (6 tests): Tests schema compliance, seed reproducibility, and loader assertions.
+- `tests/test_data_generator.py` (8 tests): Tests schema compliance, seed reproducibility, and loader assertions.
 - `tests/test_preprocessing.py` (3 tests): Tests composite risk arithmetic, risk tiers, and hub string parsing.
-- `tests/test_explainability.py` (4 tests): Tests explanation formatting, score comparison tables, and percentage contributions.
+- `tests/test_explainability.py` (5 tests): Tests explanation formatting, score comparison tables, and percentage contributions.
 
 ---
 

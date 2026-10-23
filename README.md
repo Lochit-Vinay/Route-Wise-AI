@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-FF4B4B.svg)](https://streamlit.io/)
-[![Pytest](https://img.shields.io/badge/Pytest-86%20Passed-brightgreen.svg)](https://pytest.org/)
+[![Pytest](https://img.shields.io/badge/Pytest-88%20Passed-brightgreen.svg)](https://pytest.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 > **RouteWise AI** is an enterprise-grade decision-support optimization prototype built for global logistics. It balances competing shipping objectives (**Cost**, **Transit Time**, and **Multi-Factor Risk**), enforces inviolable business constraints, provides full mathematical explainability for every recommendation, and benchmarks results against standard logistics heuristics.
@@ -210,7 +210,7 @@ python generate_report.py
 
 ## Automated Pytest Suite
 
-RouteWise AI comes with **76 comprehensive automated unit and integration tests**:
+RouteWise AI comes with **88 comprehensive automated unit and integration tests**:
 
 ```bash
 pytest -v
