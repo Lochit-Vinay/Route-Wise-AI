@@ -280,6 +280,4 @@ The application features 6 specialized executive views:
 
 ---
 
-## License
-
-MIT License. Developed for the AIQON AI Internship Challenge — October 2026.
+Developed for the AIQON — October 2026.
