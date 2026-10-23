@@ -1230,13 +1230,13 @@ elif page == "📈 Sensitivity Analysis":
 #  MODULE 7: EVALUATION & BASELINES
 # ─────────────────────────────────────────────────────────
 elif page == "📋 Evaluation & Baselines":
-    st.markdown("""
+    st.markdown(f"""
     <div class="app-header">
         <h1>📋 Evaluation & Baseline Comparison</h1>
         <p>Comprehensive evaluation of the optimization engine across all shipments</p>
     </div>
     <div class="data-disclaimer">
-        ℹ️ <b>Methodological Evaluation:</b> Performance metrics across 35 benchmark shipments comparing Multi-Objective Weighted Optimization against single-objective baselines and random heuristics under strict identical constraints.
+        ℹ️ <b>Methodological Evaluation:</b> Performance metrics across {len(shipments_df)} benchmark shipments comparing Multi-Objective Weighted Optimization against single-objective baselines and random heuristics under strict identical constraints.
     </div>
     """, unsafe_allow_html=True)
 
